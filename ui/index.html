@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <form name="form" action="javascript:onSubmit()">
+      <!-- ENV FORM -->
+      <div class="card">
+        <div class="card-body">
+          <h2>Environment</h2>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="facilityId">Auth URL</label>
+              <input
+                class="form-control"
+                name="env.authUrl"
+                placeholder="Auth URL"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="facilityId">App URL</label>
+              <input
+                class="form-control"
+                name="env.appUrl"
+                placeholder="App URL"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="facilityId">System Username</label>
+              <input
+                class="form-control"
+                name="env.sysUsername"
+                placeholder="System Username"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="facilityId">System Password</label>
+              <input
+                class="form-control"
+                type="password"
+                name="env.sysPassword"
+                placeholder="System Password"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="facilityId">Username</label>
+              <input
+                class="form-control"
+                name="env.username"
+                placeholder="Username"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="facilityId">Password</label>
+              <input
+                class="form-control"
+                type="password"
+                name="env.password"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GENERAL FORM -->
+
+      <div class="card">
+        <div class="card-body">
+          <h2>General</h2>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="organizationId">Organization ID</label>
+              <input
+                class="form-control"
+                name="general.organizationId"
+                placeholder="Enter Organization ID"
+              />
+              <small class="form-text text-muted">Description if any</small>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="facilityId">Facility ID</label>
+              <input
+                class="form-control"
+                name="general.facilityId"
+                placeholder="Facility ID"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="facilityId">Client Code</label>
+              <input
+                class="form-control"
+                maxlength="4"
+                name="general.clientCode"
+                placeholder="Client Code"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="facilityId">Extension No</label>
+              <input
+                class="form-control"
+                maxlength="30"
+                name="general.extensionNumber"
+                placeholder="Extension No"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="facilityId">Message Type</label>
+              <input
+                class="form-control"
+                name="general.messageType"
+                placeholder="Message Type"
+              />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="facilityId">Description</label>
+              <textarea
+                class="form-control"
+                name="general.description"
+                placeholder="Description"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>Items</h2>
+      <div id="items"></div>
+      <br />
+      <button id="addItem" type="button" class="btn btn-primary">
+        Add Item
+      </button>
+      <br />
+      <br />
+      <button id="btn" class="btn btn-primary btn-block">Submit</button>
+    </form>
+  </body>
+  <script src="./logic.js"></script>
+  <script src="./eventHandler.js"></script>
+  <script src="./addItemForm.js"></script>
+</html>
